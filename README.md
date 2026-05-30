@@ -60,7 +60,7 @@ TaxiOrderingSystem/
 │   ├── SignInPage.java
 │   ├── SignUpPage.java
 │   ├── PassengerPage.java
-│   ├── DriverPage.java
+│   ���── DriverPage.java
 │   └── AdminPage.java
 ├── Database/
 │   └── TaxiOrderingSystem.sql       ← Schema + seed admin account
@@ -94,16 +94,13 @@ TaxiOrderingSystem/
    -- Run in MySQL Workbench or any MySQL client:
    source /path/to/TaxiOrderingSystem.sql
    ```
-   This creates the schema and a default admin account:
-   | Username | Password  |
-   |----------|-----------|
-   | `admin`  | `admin123`|
+   This creates the schema with a default admin account. **Change the admin password immediately after setup.**
 
 4. **Update database credentials** in `DBConfig.java`
    ```java
-   private static final String DB_URL  = "jdbc:mysql://localhost:3306/TaxiOrderingSystem?...";
-   private static final String DB_USER = "root";
-   private static final String DB_PASS = "your_password_here";
+   private static final String DB_URL  = "your_database_url";
+   private static final String DB_USER = "your_db_user";
+   private static final String DB_PASS = "your_secure_password";
    ```
 
 5. **Run** `TaxiOrderingSystemApp.java`
@@ -114,13 +111,14 @@ TaxiOrderingSystem/
 - The MySQL server must be running before launching the app.
 - Only `passenger` and `driver` roles can be selected during sign-up. Admin access requires a manually inserted DB record.
 - The auto-departure rule triggers when **16 or more passengers** share the same destination and an available taxi exists for that route.
+- **Never commit actual database credentials to version control.** Use environment variables or a `.env` file (added to `.gitignore`) for sensitive data.
 
 ---
 
 ## 📸 Roles at a Glance
 
-| Role      | Default Login         |
-|-----------|-----------------------|
-| Admin     | `admin` / `admin123`  |
+| Role      | Access Method         |
+|-----------|------------------------|
+| Admin     | Direct database insert (created during initial setup) |
 | Passenger | Register via Sign Up  |
 | Driver    | Register via Sign Up  |
