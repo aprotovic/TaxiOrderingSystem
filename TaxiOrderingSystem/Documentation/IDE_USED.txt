@@ -1,0 +1,5 @@
+  🛠 Development Environment
+
+ IDE: Eclipse IDE 
+ Java JDK: 21
+ Other tools: MySQL, JavaFX, JDBC

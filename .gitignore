@@ -1,0 +1,37 @@
+# ── Compiled output ───────────────────────────────────────
+bin/
+out/
+*.class
+
+# ── IDE files ─────────────────────────────────────────────
+# Eclipse — keep .classpath and .project (needed to open in Eclipse)
+.settings/
+*.launch
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/
+build/
+dist/
+
+# ── OS files ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Secrets / environment ─────────────────────────────────
+# Never commit real credentials.
+# If you add a config.properties, add it here too:
+# src/config.properties
+
+# ── Logs & temp ───────────────────────────────────────────
+*.log
+*.tmp
