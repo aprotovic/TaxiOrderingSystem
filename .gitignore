@@ -2,6 +2,8 @@
 bin/
 out/
 *.class
+*.jar
+target/
 
 # ── IDE files ─────────────────────────────────────────────
 # Eclipse — keep .classpath and .project (needed to open in Eclipse)
@@ -27,11 +29,33 @@ dist/
 Thumbs.db
 desktop.ini
 
-# ── Secrets / environment ─────────────────────────────────
-# Never commit real credentials.
-# If you add a config.properties, add it here too:
-# src/config.properties
+# ── Secrets / Environment / Credentials ────────────────────
+# CRITICAL: Never commit actual database credentials!
+.env
+.env.local
+.env.*.local
+config.properties
+DBConfig.java
+application.properties
 
-# ── Logs & temp ───────────────────────────────────────────
+# Local configuration files with sensitive data
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ── Logs & Temp ───────────────────────────────────────────
 *.log
 *.tmp
+*.bak
+*.swp
+*.swo
+
+# ── IDE temp files ────────────────────────────────────────
+*~
+.classpath
+.project
+
+# ── JavaFX & Maven ────────────────────────────────────────
+.m2/
+.gradle/
