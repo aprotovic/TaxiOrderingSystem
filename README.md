@@ -9,22 +9,6 @@ A multi-role desktop taxi ordering and dispatch management system built with **J
 
 ---
 
-## 📸 Desktop Application Screenshots
-
-<div align="center">
-  <img src="docs/screenshots/taxigo_passenger_portal.png" alt="Passenger Booking & Destination Search" width="90%" />
-  <p><i>Figure 1: Passenger Portal with destination search, real-time taxi availability, and booking history.</i></p>
-</div>
-
-<div align="center">
-  <img src="docs/screenshots/taxigo_admin_dispatch.png" alt="Admin Fleet Dispatch & Queue Analytics" width="90%" />
-  <p><i>Figure 2: Admin Dashboard displaying real-time fleet metrics, driver routes, and automatic departure controls.</i></p>
-</div>
-
-> **Tip:** Place your JavaFX screenshots in `docs/screenshots/taxigo_passenger_portal.png` and `docs/screenshots/taxigo_admin_dispatch.png`.
-
----
-
 ## ✨ Features by Role
 
 ### 🧍 Passenger Portal
